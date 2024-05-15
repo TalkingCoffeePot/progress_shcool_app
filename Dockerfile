@@ -12,8 +12,7 @@ RUN python3 -m pip install --no-cache-dir poetry
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi --no-root
 
-COPY ./source /src/
+COPY ./source /src
 
 EXPOSE 8000
 
-ENTRYPOINT ["sh", "init_and_run.sh"]
