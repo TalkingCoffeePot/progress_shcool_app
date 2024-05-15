@@ -1,4 +1,4 @@
-#!/bin/sh
+/bin/sh
 
 # Создаем миграции и применяем их
 python manage.py makemigrations
