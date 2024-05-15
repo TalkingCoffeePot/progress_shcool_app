@@ -16,4 +16,4 @@ COPY ./source /src
 
 EXPOSE 8000
 
-ENTRYPOINT ["sh", "init_and_run.sh"]
+ENTRYPOINT ["sh", "./src/init_and_run.sh"]
