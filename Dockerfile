@@ -3,16 +3,16 @@ FROM python:3.11
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /src
+WORKDIR /
 
-COPY poetry.lock pyproject.toml README.md init_and_run.sh /src
+COPY poetry.lock pyproject.toml README.md init_and_run.sh /
 
 RUN python3 -m pip install --no-cache-dir poetry
 
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi --no-root
 
-COPY ./source /src
+COPY ./source /
 
 EXPOSE 8000
 
