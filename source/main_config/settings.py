@@ -62,7 +62,7 @@ AUTHENTICATION_BACKENDS = [
    'django.contrib.auth.backends.ModelBackend', 
 ]
 
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
 
 ROOT_URLCONF = 'main_config.urls'
 TEMPLATES = [
