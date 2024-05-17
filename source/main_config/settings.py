@@ -59,8 +59,10 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-   'django.contrib.auth.backends.ModelBackend', # this line fixed my problem
+   'django.contrib.auth.backends.ModelBackend', 
 ]
+
+SESSION_COOKIE_SECURE = True
 
 ROOT_URLCONF = 'main_config.urls'
 TEMPLATES = [
