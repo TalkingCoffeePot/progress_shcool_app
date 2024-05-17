@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /src
 
-COPY poetry.lock pyproject.toml README.md init_and_run.sh /src
+COPY poetry.lock pyproject.toml README.md /src
 
 RUN python3 -m pip install --no-cache-dir poetry
 
@@ -13,3 +13,6 @@ RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi --no-root
 
 COPY ./source /src
+
+ENTRYPOINT ["sh", "init_and_run.sh"]
+
